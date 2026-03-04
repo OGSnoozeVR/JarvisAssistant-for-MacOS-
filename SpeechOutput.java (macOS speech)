@@ -1,0 +1,21 @@
+package jarvis;
+
+public class SpeechOutput {
+
+    public static void speak(String text) {
+
+        try {
+
+            Runtime.getRuntime().exec(new String[]{
+                "say", text
+            });
+
+        } catch(Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+    }
+
+}
